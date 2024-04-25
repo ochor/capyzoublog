@@ -1,0 +1,207 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Hi+Melody:400');
+
+/*전체관리영역*/
+*{font-family: ;font-size: ;}/*루트-*/
+html{box-sizing: ;margin: ;padding: ;}/*-영역*/
+
+/*ROOT*/
+:root {
+    /*bgcolor*/
+    --bg-color1:#7D4941;
+    --bg-color2:#FBF3E8;
+    --bg-color3:#F06226;
+    --bg-color4:#91C777;
+    --bg-color5:#866738;
+    /*color*/
+    --font-color1: #303030;
+}
+
+/*전체-배경*/
+body{
+    background-image: url(./images/bg.png);
+    font-family: 'Hi Melody', 맑은 고딕, arial;
+    font-size: 1.8rem;
+    color: var(--font-color1);
+}
+
+/*머릿단*/
+header{
+    width: 100%;
+    margin: 1rem auto 2.5rem auto;
+    /*
+    margin: 0; - 상하좌우 전부 0값
+    margin: 0 auto; - 상하는0, 좌우는 auto
+    margin: 0 auto 40px; -*상 좌우 하
+    margin: 0 auto 20px 40px; - 상 0 우 0 하 20px 왼 40px
+    */
+}
+header h1{
+    text-align: center;
+    padding: 1rem auto;
+}
+/*img, span, input : 인라인 속성 -> 줄바꿈이 일어나지 않는 속성*/
+/*h1~h6, p, div, article...: 블록속성 -> 줄바꿈이 일어남*/
+/*h1~h6, p : 텍스트속성 -> 전용 정렬모드가 따로 존재*/
+/*블록 : 상, 하값 모두 가짐, 인라인 : 상, 하값을 못 가짐*/
+/*블록 > 인라인*/
+
+header h1 .logo{
+    padding: 2rem;
+}
+
+header .gnb ul{
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid var(--bg-color1);
+    border-bottom: 1px solid var(--bg-color1);
+    padding: 1rem 0 1rem;
+    background-color: rgba(255, 211, 183, .4);
+}
+
+header li{
+    margin: 0 1.5rem;
+    font-weight: bold;
+    font-size: 2.2rem;
+    color: var(--bg-color5);
+}
+
+header li a:hover{
+
+}
+
+/*본문단*/
+section{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+/*메인 - 왼쪽 영역*/
+main{
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px var(--bg-color1);
+    padding: 4rem;
+    background-color: var(--bg-color2);
+    margin-bottom: 3rem;
+}
+/*메인 - 왼쪽 영역 - 첫번째 단락*/
+.hero{
+    margin-bottom: 2.4rem;
+}
+.hero h2{
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.hero p{
+    padding: 0.8rem;
+    background-color: var(--bg-color4);
+    width: 400px;
+    border-radius: 0px 20px 20px 15px;
+}
+
+.hero time{
+    color: var(--bg-color2);
+}
+
+figure{
+    padding: 1em;
+}
+
+/*메인 - 왼쪽 영역 - 두번째 단락~다섯번째 단락*/
+article{
+    margin-bottom: 2.4rem;
+}
+article h3{
+    border-bottom: 2px solid var(--bg-color4);
+    background-image:url(./images/h2_icon.png) ;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: var(--bg-color4);
+    margin-bottom: 1.5rem;
+    padding: 10px 10px 10px 50px ;
+}
+article p{
+    font-family: 'dotum';
+    line-height: 1.6;
+    margin-bottom: 1.6rem;
+}
+
+
+/*어사이드 - 오른쪽 영역*/
+aside{}
+/*어사이드 - 오른쪽 영역 - 네비 단락*/
+aside nav{
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px var(--bg-color1);
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+    background-color: var(--bg-color2);
+}
+
+aside h4{
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: var(--bg-color1);
+}
+
+aside ul{
+    color: var(--font-color1);
+}
+
+aside li{
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+/*어사이드 - 오른쪽 영역 - 네비 단락 중 첫번쨰*/
+.lnb{}
+.lnb li{
+    list-style-type: circle;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+.lnb a{
+    color: var(--bg-color4);
+}
+.lnb a:hover{
+    color: var(--bg-color3);
+}
+
+/*어사이드 - 오른쪽 영역 - 네비 단락 중 두번쨰*/
+.recent_b{}
+.recent_b ul{
+    height: 15rem;
+    overflow: hidden scroll;
+}
+.recent_b li{
+    border-bottom: 1px solid var(--bg-color1);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/*바닥단*/
+footer{
+    background-color: var(--bg-color1); /*void-공허 function-함수(박스) var-변수*/
+    color: var(--bg-color2);
+    text-align: center;
+    padding: .9rem .5rem 1.5rem;
+}
+
+
+/*반응형을 위한 미디어 스크린 구간*/
+@media (min-width: 800px) {
+    section{
+        display: flex;
+        justify-content: space-between;/*가로정렬 3가지 left, center, right + 분배정렬 space- around evenly between*/
+    }
+    main{
+        width: 70%;
+    }
+    aside{
+        width: 25%;
+    }
+}
